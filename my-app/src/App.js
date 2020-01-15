@@ -8,15 +8,16 @@ import UserList from './components/UserList';
 import Personal from  './components/PersonalCard';
 
 class App extends React.Component {
-  
+
 
 
   render(){
   return (
     <div className="App">
     <h1>GitHub User List </h1>
+    <Personal />
 <UserList/>
-<Personal />
+
 
 
     </div>

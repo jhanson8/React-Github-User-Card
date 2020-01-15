@@ -28,7 +28,7 @@ class Personal extends React.Component{
 //CDA
   componentDidMount(){
     axios
-    .get('https://api.github.com/users/jhanson8/')
+    .get('https://api.github.com/users/jhanson8')
     .then(response => {
       this.setState({
          users: response.data
@@ -42,23 +42,24 @@ class Personal extends React.Component{
 
 
   render(){
+
     return(
       <div>
       <Grid item>
         <Card >
          <CardMedia
-            image={props.users.avatar_url}
+            image={this.state.avatar_url}
             title="Profile Picture"
           />
           <CardContent>
             <Typography>
-            GitHub User Card
+            GitHub Followers List:
             </Typography>
             <Typography gutterBottom variant="h5" component="h2">
-              Username: {props.users.login}
+              Username: {this.state.users.login}
             </Typography>
             <Typography >
-              Followers:  {props.users.followers}
+              Followers:  {this.state.users.followers}
             </Typography>
             <Typography>
 
